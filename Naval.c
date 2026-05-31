@@ -29,6 +29,26 @@ int main () {
   for (i = 0; i < 3; i++){
     tabuleiro[linha2 + i][coluna2] = navio[i];
   }
+
+  
+
+  for (i = 0; i < 3; i++){
+    for (j = 0; j < 3; j++){
+      if ( i == j){
+        tabuleiro[i][j] = 3;
+      }
+    }
+  }
+  
+  for (i = 0; i < 3; i++){
+    for (j = 0; j < 3; j++){
+      if ( i + j == 9){
+        tabuleiro[i][j] = 3;
+      }
+    }
+  }
+  
+  
  //imprimindo o tabuleiro
 
   printf("BATALHA NAVAL\n");
