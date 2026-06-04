@@ -1,16 +1,20 @@
 #include <stdio.h>
+#define linha 10
+#define coluna 10
+#define MatrizConeLinha 5
+#define MatrizConeColuna 5
 
 int main () {
 
-    char linha[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+    char Inicio[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     //começando a criar o tabuleiro
 
     int tabuleiro [10][10];
     int i;
     int j;
 
-    for (i = 0; i < 10; i++){
-        for(j = 0; j < 10; j++) {
+    for (i = 0; i < linha; i++){
+        for(j = 0; j < coluna; j++) {
             tabuleiro[i][j] = 0;
         }
     }
@@ -40,28 +44,36 @@ int main () {
     }
   }
   
-  for (i = 0; i < 3; i++){
-    for (j = 0; j < 3; j++){
+  for (i = 0; i < linha; i++){
+    for (j = 0; j < coluna; j++){
       if ( i + j == 9){
         tabuleiro[i][j] = 3;
       }
     }
   }
-  
+
+ int matriz[MatrizConeLinha][MatrizConeColuna];
+      for (int i = 0; i < 5; i++){
+        for (int j = 0; j < 5; j++){
+          if (matriz [i][j] ){
+           
+          }
+        }
+      }
   
  //imprimindo o tabuleiro
 
   printf("BATALHA NAVAL\n");
  for(i = 0; i < 10; i++){
-    printf("%c", linha[i]);
+    printf("%c", Inicio[i]);
  }
  printf("\n");
 
- for(i = 0; i < 10; i++){
+ for(i = 0; i < linha; i++){
 
     printf("%d", i);
 
-    for (j = 0; j < 10; j++) {
+    for (j = 0; j < coluna; j++) {
 
      printf("%d", tabuleiro[i][j]); 
     }
